@@ -9,7 +9,10 @@
         "lint": "next lint",
         "tsc": "tsc -noEmit",
         "prettier:format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml,json}\" --ignore-path .gitignore",
-        "prettier:check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml,json}\""
+        "prettier:check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml,json}\"",
+        "validate": "npm run prettier:format && npm run lint && npm run tsc && npm run build",
+        "prepare": "husky install",
+        "eslint:format": ""
     },
     "dependencies": {
         "@radix-ui/react-slot": "^1.0.2",
@@ -29,6 +32,8 @@
         "@types/react-dom": "^18",
         "eslint": "^8",
         "eslint-config-next": "14.2.3",
+        "husky": "^8.0.0",
+        "lint-staged": "^15.2.5",
         "postcss": "^8",
         "prettier": "^3.2.5",
         "tailwindcss": "^3.4.1",
